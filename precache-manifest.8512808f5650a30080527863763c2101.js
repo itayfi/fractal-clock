@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "88bf009a112528dde7b6a57ccce20610",
+    "revision": "73094019602eb78f3e08285c59509a42",
     "url": "/fractal-clock/index.html"
   },
   {
-    "revision": "3bf24ad01f015b50d931",
+    "revision": "4770aaec9b773e8b836a",
     "url": "/fractal-clock/static/css/main.4942f4db.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fractal-clock/static/js/2.9a31eb09.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3bf24ad01f015b50d931",
-    "url": "/fractal-clock/static/js/main.7759a89b.chunk.js"
+    "revision": "4770aaec9b773e8b836a",
+    "url": "/fractal-clock/static/js/main.f00deb2e.chunk.js"
   },
   {
     "revision": "6c65547d0ace86d4e09c",
