@@ -25,6 +25,16 @@ function getTransformation(fraction) {
         .translate(-CANVAS_SIZE / 2, -CANVAS_SIZE / 2);
 }
 
+function setLineStyle(ctx, settings, i) {
+    switch (settings.dropoffMode) {
+        case 'linear':
+            ctx.strokeStyle = tinycolor(settings.color).setAlpha(i / settings.maxDepth).toRgbString();
+        case 'constant':
+            ctx.lineWidth = Math.pow(SCALE_FACTOR, i - settings.maxDepth);
+            break;
+    }
+}
+
 function createFractal(settings) {
     let result = new OffscreenCanvas(CANVAS_SIZE, CANVAS_SIZE);
     let temp = new OffscreenCanvas(CANVAS_SIZE, CANVAS_SIZE);
@@ -39,7 +49,6 @@ function createFractal(settings) {
         }
     }
 
-    let lineWidth = Math.pow(SCALE_FACTOR, -settings.maxDepth);
     tempCtx.strokeStyle = settings.color;
     for (let i = 0; i < settings.maxDepth; i++) {
         tempCtx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
@@ -48,8 +57,7 @@ function createFractal(settings) {
             tempCtx.drawImage(result, 0, 0);
         }
         tempCtx.setTransform(new DOMMatrix());
-        tempCtx.lineWidth = lineWidth;
-        tempCtx.strokeStyle = tinycolor(settings.color).setAlpha(i / settings.maxDepth).toRgbString();
+        setLineStyle(tempCtx, settings, i);
         tempCtx.beginPath();
         for (let transform of transforms) {
             tempCtx.moveTo(CANVAS_SIZE / 2, CANVAS_SIZE / 2);
@@ -57,7 +65,6 @@ function createFractal(settings) {
             tempCtx.lineTo(end.x, end.y);
         }
         tempCtx.stroke();
-        lineWidth *= SCALE_FACTOR;
         resultCtx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
         resultCtx.drawImage(temp, 0, 0);
     }

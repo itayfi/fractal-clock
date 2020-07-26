@@ -6,7 +6,8 @@ const DEFAULT_SETTINGS = {
     seconds: true,
     maxDepth: 8,
     showFps: false,
-    color: '#5cc0ff'
+    color: '#5cc0ff',
+    dropoffMode: 'exponential'
 }
 
 const SettingsContext = React.createContext({});
