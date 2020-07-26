@@ -3,6 +3,8 @@ import React from 'react';
 import {useSettings} from './SettingsContext.js';
 import drawClockFractal from './drawClockFractal.js';
 
+import './Clock.css';
+
 export default function Clock() {
     const {raw: settings} = useSettings();
     const canvas = React.useRef();
