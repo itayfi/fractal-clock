@@ -6,7 +6,7 @@ const DEFAULT_SETTINGS = {
     seconds: true,
     maxDepth: 8,
     showFps: false,
-    color: '#00ffff'
+    color: '#5cc0ff'
 }
 
 const SettingsContext = React.createContext({});
