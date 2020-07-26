@@ -65,37 +65,6 @@ function createFractal(settings) {
     return result.transferToImageBitmap();
 }
 
-function testImageBitmap(settings) {
-    let temp = new OffscreenCanvas(CANVAS_SIZE, CANVAS_SIZE);
-    let ctx = temp.getContext('2d');
-
-    let transforms = [];
-    let handFractions = getTime();
-    for (let hand in handFractions) {
-        if (settings[hand]) {
-            transforms.push(getTransformation(handFractions[hand]));
-        }
-    }
-
-    ctx.strokeStyle = 'blue';
-    ctx.lineWidth = 1;
-    for (let transform of transforms) {
-        ctx.setTransform(transform);
-        ctx.strokeRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
-    }
-    ctx.setTransform(new DOMMatrix());
-    ctx.beginPath();
-    for (let transform of transforms) {
-        ctx.moveTo(CANVAS_SIZE / 2, CANVAS_SIZE / 2);
-        let end = new DOMPoint(CANVAS_SIZE / 2, CANVAS_SIZE / 2).matrixTransform(transform);
-        ctx.lineTo(end.x, end.y);
-    }
-    ctx.stroke();
-
-    return temp.transferToImageBitmap();
-}
-
-
 export default function drawClockFractal(timestamp, canvas, settings) {
     const ctx = canvas.getContext('bitmaprenderer');
 
