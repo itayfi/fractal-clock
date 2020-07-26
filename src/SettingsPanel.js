@@ -16,6 +16,6 @@ export default function SettingsPanel() {
         <Checkbox label="Minutes" {...settings.minutes} />
         <Checkbox label="Seconds" {...settings.seconds} />
         <Input type="color" label="Color " {...settings.color} />
-        <Checkbox label="Show FPS" {...settings.showFps} />
+        {/*<Checkbox label="Show FPS" {...settings.showFps} />*/}
     </div>;
 };
