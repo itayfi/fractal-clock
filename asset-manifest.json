@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/fractal-clock/static/css/main.1c393315.chunk.css",
+    "main.js": "/fractal-clock/static/js/main.a331a83e.chunk.js",
+    "main.js.map": "/fractal-clock/static/js/main.a331a83e.chunk.js.map",
+    "runtime-main.js": "/fractal-clock/static/js/runtime-main.8402a5c5.js",
+    "runtime-main.js.map": "/fractal-clock/static/js/runtime-main.8402a5c5.js.map",
+    "static/js/2.9a31eb09.chunk.js": "/fractal-clock/static/js/2.9a31eb09.chunk.js",
+    "static/js/2.9a31eb09.chunk.js.map": "/fractal-clock/static/js/2.9a31eb09.chunk.js.map",
+    "index.html": "/fractal-clock/index.html",
+    "precache-manifest.aa97e1bb572032030563f39d99848f79.js": "/fractal-clock/precache-manifest.aa97e1bb572032030563f39d99848f79.js",
+    "service-worker.js": "/fractal-clock/service-worker.js",
+    "static/css/main.1c393315.chunk.css.map": "/fractal-clock/static/css/main.1c393315.chunk.css.map",
+    "static/js/2.9a31eb09.chunk.js.LICENSE.txt": "/fractal-clock/static/js/2.9a31eb09.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8402a5c5.js",
+    "static/js/2.9a31eb09.chunk.js",
+    "static/css/main.1c393315.chunk.css",
+    "static/js/main.a331a83e.chunk.js"
+  ]
+}
